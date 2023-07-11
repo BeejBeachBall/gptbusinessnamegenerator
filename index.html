@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Business Name Generator</h2>
+
+<form action="/" method="post">
+  <label for="industry">Industry:</label><br>
+  <input type="text" id="industry" name="industry"><br>
+  <label for="product">Product:</label><br>
+  <input type="text" id="product" name="product"><br><br>
+  <input type="submit" value="Generate Names">
+</form> 
+
+{% if name_ideas %}
+<h3>Business Names:</h3>
+<ul>
+    {% for name in name_ideas %}
+    <li>{{ name }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+</body>
+</html>
